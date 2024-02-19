@@ -1,0 +1,27 @@
+extends layout.pug
+
+block content 
+  nav.grid-container.portfolio-breadcrumb
+    a(href='/') ← Back
+  article.grid-container.portfolio-intro.portfolio-project
+    .grid-x
+      .cell.small-6.medium-9.large-9
+
+        h1 #{projectContext.project.project_name}
+
+        p.lead.text-light
+          #{projectContext.project.description}
+
+      .cell.portfolio-meta.small-6.medium-2.large-3
+        h6 Technologies
+
+        ul
+          each item in projectContext.project.technologies
+            li #{item}
+
+        a.button.expanded(href=`${projectContext.project.live_link}`) Live Demo
+        a.button.expanded(href=`${projectContext.project.github_link}`) GitHub Repo
+    
+    - for (var i = 1; i < projectContext.project.image_urls.length; i++) {
+      img.image.portfolio-image(src=`${projectContext.project.image_urls[i]}`)
+    - }
