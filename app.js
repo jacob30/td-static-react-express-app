@@ -2,6 +2,9 @@
 
 // require express
 var express = require('express');
+// var serverless = require('serverless-http');
+// import express, { Router } from 'express';
+// import serverless from 'serverless-http';
 // require data.json file
 const { projects } = require('./data.json');
 // require json for section content
@@ -9,8 +12,11 @@ const index = require('./data/index.json');
 const about = require('./data/about.json');
 
 /* set up middleware */
-var app = express();
+const app = express();
+// const router = Router();
+app.get('/hello', (req, res) => res.send('Hello World!'));
 // set view engine to pug
+// app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 // serve status files located in public folders
 app.use('/static', express.static('public'));
@@ -82,5 +88,7 @@ app.listen(port, () => {
   /* log a string to the console that says which port the app is listening to */
   console.log(`The portfolio site is running at localhost:${port}`);
 });
+
+// const handler = serverless(app);
 
 module.exports = app;
