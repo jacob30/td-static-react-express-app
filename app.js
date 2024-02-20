@@ -21,7 +21,7 @@ app.set('view engine', 'pug');
 // serve status files located in public folders
 app.use('/static', express.static('public'));
 // app should listen on port 3000
-var port = 3000;
+const port = process.env.PORT || 3000;
 
 /* context object */
 
@@ -35,6 +35,7 @@ var context = {
 
 // An "index" route (/) to render the "Home" page
 app.get('/', (req, res) => {
+  res.status(200);
   // locals set to data.projects
   res.locals.context = context;
   res.render('index', context);
@@ -84,9 +85,15 @@ app.use((err, req, res, next) => {
 });
 
 // Listens to the port variable
-app.listen(port, () => {
+app.listen(port, (error) => {
   /* log a string to the console that says which port the app is listening to */
-  console.log(`The portfolio site is running at localhost:${port}`);
+  if (!error) {
+    console.log(
+      `Server is Successfully Running, and App is listening on port ${port}`
+    );
+  } else {
+    console.log("Error occurred, server can't start", error);
+  }
 });
 
 // const handler = serverless(app);

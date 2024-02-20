@@ -1,10 +1,10 @@
 {
   "name": "Jacob Silverman",
-  "description": "Australian. Currently undertaking theTeam Treehouse Full Stack Javascript Techdegree. Looking for work. Hire me!",
-  "shortbio": "Australian. Currently undertaking the Team Treehouse Full Stack Javascript Techdegree. Looking for work. Hire me!",
+  "description": "Portfolio page from the Team Treehouse Full Stack Javascript Techdegree. Looking for work. Hire me!",
+  "shortbio": "Portfolio page from the Team Treehouse Full Stack Javascript Techdegree. Looking for work. Hire me!",
   "image_url": "../static/images/Profile.png",
   "lead": "Full Stack JavaScript Developer",
-  "bio": "Software and web development professional with a passion for Javascript. Dedicated to offering cutting edge technical solutions to the Javascript community. Experience consulting with clients to gather and analyze business requirements and then translating those requirements into an elegant technical solution. Currently undertaking Team Treehouse Fullstack Techdegree in Javascript, CSS, HTML, and related tools.",
+  "bio": "Software and web development professional with a passion for Javascript. Dedicated to offering cutting edge technical solutions to the Javascript community. Experience consulting with clients to gather and analyze business requirements and then translating those requirements into an elegant technical solution. Recently completed Team Treehouse Fullstack Techdegree in Javascript, CSS, HTML, and related tools.",
   "skills": [
     "Html",
     "Css",
@@ -18,6 +18,6 @@
   ],
   "contact": ["929-238-2665", "silverman@me.com"],
   "linkedin": "https://www.linkedin.com/in/silvermanjacob/",
-  "github": "https://github.com/jacobsilverman/",
+  "github": "https://github.com/jacob30/",
   "twitter": "https://twitter.com/JacobSilverman"
 }
